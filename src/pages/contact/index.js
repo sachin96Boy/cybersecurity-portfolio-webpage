@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
+// import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
+import { meta, socialprofils } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
@@ -17,52 +17,52 @@ export const ContactUs = () => {
     variant: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormdata({ loading: true });
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setFormdata({ loading: true });
 
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
+  //   const templateParams = {
+  //     from_name: formData.email,
+  //     user_name: formData.name,
+  //     to_name: contactConfig.YOUR_EMAIL,
+  //     message: formData.message,
+  //   };
 
-    emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! , Looking forward to reading your email.",
-            variant: "success",
-            show: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Failed to send!,${error.text}`,
-            variant: "danger",
-            show: true,
-          });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
-        }
-      );
-  };
+  //   emailjs
+  //     .send(
+  //       contactConfig.YOUR_SERVICE_ID,
+  //       contactConfig.YOUR_TEMPLATE_ID,
+  //       templateParams,
+  //       contactConfig.YOUR_USER_ID
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setFormdata({
+  //           loading: false,
+  //           alertmessage: "SUCCESS! , Looking forward to reading your email.",
+  //           variant: "success",
+  //           show: true,
+  //         });
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         setFormdata({
+  //           alertmessage: `Failed to send!,${error.text}`,
+  //           variant: "danger",
+  //           show: true,
+  //         });
+  //         document.getElementsByClassName("co_alert")[0].scrollIntoView();
+  //       }
+  //     );
+  // };
 
-  const handleChange = (e) => {
-    setFormdata({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormdata({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   return (
     <HelmetProvider>
@@ -92,7 +92,7 @@ export const ContactUs = () => {
               <p className="my-0">{formData.alertmessage}</p>
             </Alert>
           </Col>
-          <Col lg="5" className="mb-5">
+          <Col lg="5" className="mb-5 text-lg">
             <h3 className="color_sec py-4">Get in touch</h3>
             <address>
               <strong>Email:</strong>{" "}
@@ -101,9 +101,10 @@ export const ContactUs = () => {
               </a>
               <br />
             </address>
+            <p>Whats App: {socialprofils.whatsAppbusiness}</p>
             <p>{contactConfig.description}</p>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          {/* <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
               <Row>
                 <Col lg="6" className="form-group">
@@ -150,7 +151,7 @@ export const ContactUs = () => {
                 </Col>
               </Row>
             </form>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
