@@ -7,6 +7,7 @@ import {
   meta,
   worktimeline,
   skills,
+  socialprofils,
 } from "../../content_option";
 
 export const About = () => {
@@ -52,6 +53,39 @@ export const About = () => {
                 })}
               </tbody>
             </table>
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">My Facebook Groups</h3>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <ul>
+              <li>
+                <a href={socialprofils.facebookGroup1}>
+                  𝓛𝓸𝓿𝓮 𝓪𝓷𝓭 𝓛𝓸𝓿𝓮 𝓹𝓪𝓰𝓮♡︎group
+                </a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookGroup2}>Cuty Baby Page Group</a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookGroup3}>CUTE AI PHOTOS</a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookGroup4}>
+                  Ai Flowers & Girls Page Group
+                </a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookGroup5}>
+                  Digital Surreal Universal Art
+                </a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookGroup6}>∆DTA Group</a>
+              </li>
+            </ul>
           </Col>
         </Row>
         <Row className="sec_sp">
