@@ -90,6 +90,30 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
+            <h3 className="color_sec py-4">My Social Channels</h3>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <ul>
+              <li>
+                <a href={socialprofils.facebookPage1}>Love & Obey</a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookPage2}>CUTY BAB </a>
+              </li>
+              <li>
+                <a href={socialprofils.facebookPage3}>DTA</a>
+              </li>
+              <li>
+                <a href={socialprofils.tiktok}>TikTok</a>
+              </li>
+              <li>
+                <a href={socialprofils.pintrest}>Pintrest</a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
             <h3 className="color_sec py-4">Skills</h3>
           </Col>
           <Col lg="7" className="grid-container">

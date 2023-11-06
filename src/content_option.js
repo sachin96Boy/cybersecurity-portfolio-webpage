@@ -272,6 +272,7 @@ const socialprofils = {
   facebookGroup5: "https://web.facebook.com/groups/182723748080087",
   facebookGroup6: "https://web.facebook.com/groups/468358821918347",
   tiktok: "https://www.tiktok.com/@anurangacharithasri",
+  pintrest: "https://www.pinterest.com/anurangacharitha/",
   whatsAppbusiness: "+94 77 907 7401"
 };
 export {
